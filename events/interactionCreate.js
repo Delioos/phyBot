@@ -1,12 +1,10 @@
 const { Events } = require('discord.js');
+const {twitterID} = require('../config.json');
 
 module.exports = {
     name: Events.InteractionCreate,
     async execute(interaction) {
-        // if the interaction is a message component interaction
-        if (interaction.isMessageComponent()) {
 
-        }
         if (!interaction.isChatInputCommand()) return;
 
         const command = interaction.client.commands.get(interaction.commandName);

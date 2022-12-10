@@ -1,6 +1,6 @@
 // command to build embeds with a title, an image , a description and a footer
 const {SlashCommandBuilder, EmbedBuilder, } = require('discord.js');
-
+const {adminID} = require('../config.json');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embed-builder')
@@ -14,7 +14,7 @@ module.exports = {
 
     async execute(interaction) {
         // check if the user is granted to use this command
-        if (interaction.member.roles.cache.has('1006153458719653969')) { // replace ROLE_ID with the ID of the role that is allowed to use this command
+        if (interaction.member.roles.cache.has(adminID)) { // replace ROLE_ID with the ID of the role that is allowed to use this command
             // get the options
             const title = interaction.options.getString('title');
             const image = interaction.options.getString('image');

@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "config.json": "^0.0.4",
-    "discord-reply": "^0.1.2"
+    "discord-reply": "^0.1.2",
+    "discord.js-collector": "^1.8.9",
+    "twit": "^2.2.11"
   }
 }
